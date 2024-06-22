@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="refDemo">
     <h3>Ref标注类型</h3>
     <div>{{ name }}</div>
     <div>{{ age }}</div>
@@ -30,3 +30,9 @@ const change = () => {
 const address = ref<string>();
 address.value = "北京";
 </script>
+<style scoped>
+#refDemo{
+    width: 100%;
+    border: 1px solid red;
+}
+</style>
