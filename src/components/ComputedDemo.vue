@@ -1,6 +1,6 @@
 <template>
   <div id="computedDemo">
-    <h3>Computed</h3>
+    <h3>Computed标注类型</h3>
     <div>count1: {{ doubleCount }}</div>
     <div>count2: {{ doubleCount2 }}</div>
   </div>
