@@ -5,6 +5,8 @@
   <PropsDemo title="Props传参" text="456456456" :state="state" />
 
   <DataDemo />
+
+  <RefsDemo />
 </template>
 
 <script setup lang="ts">
@@ -12,6 +14,7 @@ import { reactive, provide } from "vue";
 import PropsSetupDemo from "@/components/PropsSetupDemo.vue";
 import PropsDemo from "@/components/PropsDemo.vue";
 import DataDemo from "@/components/DataDemo.vue";
+import RefsDemo from "@/components/RefsDemo.vue";
 
 //建议将注入key的类型放在一个单独的文件中
 // import type { InjectionKey } from "vue";
