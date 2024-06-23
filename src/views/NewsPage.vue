@@ -2,6 +2,8 @@
   <div>
     <h3>News Page</h3>
     <NewsData @send="getData" />
+
+    <
   </div>
 </template>
 
