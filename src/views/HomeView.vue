@@ -1,6 +1,4 @@
 <template>
-  <div>1-4</div>
-  <router-link to="/about">5-8</router-link>
   <RefDemo />
 
   <ReactiveDemo />
