@@ -20,6 +20,11 @@
     <p>{{ getHelloChange }}</p>
     <p>{{ getMessage }}</p>
   </div>
+
+  <div class="ChildDemo">
+    <p>选项式 为组件的事件处理函数标注类型</p>
+    <button @click="getMessage">点击</button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -66,6 +71,10 @@ export default defineComponent({
   methods: {
     handleClick() {
       this.$emit("addBook", 1);
+    },
+    getMessage(e: Event) {
+      console.log((e.target as HTMLButtonElement).innerHTML);
+      
     },
   },
 });
