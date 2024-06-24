@@ -7,14 +7,18 @@
   <DataDemo />
 
   <RefsDemo />
+
+  <Modal ref="MyModal" />
+  <button @click="MyModal?.open()">打开组件消息</button>
 </template>
 
 <script setup lang="ts">
-import { reactive, provide } from "vue";
+import { reactive, provide, ref } from "vue";
 import PropsSetupDemo from "@/components/PropsSetupDemo.vue";
 import PropsDemo from "@/components/PropsDemo.vue";
 import DataDemo from "@/components/DataDemo.vue";
 import RefsDemo from "@/components/RefsDemo.vue";
+import Modal from "@/components/Modal.vue";
 
 //建议将注入key的类型放在一个单独的文件中
 // import type { InjectionKey } from "vue";
@@ -31,5 +35,8 @@ const state: iState = reactive({
   name: "王五",
   age: 28,
 });
+
+//标注类型
+const MyModal = ref<InstanceType<typeof Modal> | null>();
 </script>
 <style scoped></style>
