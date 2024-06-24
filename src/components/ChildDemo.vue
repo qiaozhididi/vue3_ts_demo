@@ -5,6 +5,11 @@
   <div>{{ msg }}</div>
   <div>{{ book.name }}</div>
   <div>{{ book.price }}</div></div>
+
+  <div class="ChildDemo">选项式 为组件的emits标注类型
+
+    <button @click="handleClick">点击</button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -27,11 +32,19 @@ export default defineComponent({
       required: true,
     },
   },
+  methods:{
+    handleClick(){
+      this.$emit('addBook',1)
+    }
+  }
 });
+
+
 </script>
 <style scoped>
 .ChildDemo {
    width: 100%;
    border: 4px solid black;
+   margin-bottom: 20px;
 }
 </style>

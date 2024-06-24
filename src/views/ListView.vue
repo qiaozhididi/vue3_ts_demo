@@ -1,6 +1,13 @@
 <template>
   <div>List页面</div>
-  <ChildDemo name="名字" :id="1001" msg="消息" :book="book" />
+  <h3>{{ bookNum }}</h3>
+  <ChildDemo
+    name="名字"
+    :id="1001"
+    msg="消息"
+    :book="book"
+    @addBook="getBook"
+  />
 </template>
 
 <script lang="ts">
@@ -14,10 +21,21 @@ export default defineComponent({
         name: "book",
         price: 100,
       },
+      bookNum: 0,
     };
   },
   components: {
     ChildDemo,
+  },
+  emits: {
+    addBook(num: number) {
+      return num > 0;
+    },
+  },
+  methods: {
+    getBook(num: number) {
+      this.bookNum = num;
+    },
   },
 });
 </script>
